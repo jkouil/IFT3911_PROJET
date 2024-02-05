@@ -1,0 +1,11 @@
+voyage ferroviaire:
+
+1. Rechercher Trajets 
+-Client recherche des trajets ferroviaires en spécifiant les détails tels que l’origine de départ (ville), destination (ville) et la date
+-Système recherche les trajets disponibles en fonction des critères
+2. Réserver trajet
+-Client réserve un trajet avec le trajet choisi, classe et son siège
+3. Payer la réservation
+-Client paye sa réservation et/ou informations supplémentaires
+4. Accusé de réception
+-Client reçoit les détails de sa réservation et sa confirmation (ID)
