@@ -1,0 +1,63 @@
+voyage naval:
+
+scenario 1: création d'un objet
+préconditions: non
+postconditions: création est enregistré avec succès
+
+principal
+1. L'administrateur sélectionne l'option de création.
+2. Le système affiche le menu des créations.
+3. L'administrateur choisit l'option désirée.
+4. L'administrateur entre le nom de la création.
+5. Le système vérifie la validité de la création.
+6. Le système confirme la création et l'enregistre.
+7. Le système affiche les données modifiées.
+8. L'administrateur confirme les modifications.
+
+alternatif 1: option de sections d'un paquebot.
+3.a L'administrateur choisit l'option de sections d'un paquebot.
+3.a.1 L'administrateur sélectione un paquebot. 
+3.a.2 L'administrateur choisit le type de section. (I, O, S, F)
+3.a.3 L'administrateur entre le nombre de cabines disponibles du type choisi dans le paquebot.
+3.a.4 Le scenario continue à l'étape 6.
+
+alternatif 2: erreur du nom.
+5.a Le système reporte un erreur du nom (noms illégals ou noms existant)
+5.a.1 Le système demande à l'administrateur d'entrer un nom à nouveau
+5.a.2 Le scenario continue à l'étape 4.
+
+alternatif 3: option de sections d'un port.
+3.a L'administrateur choisit l'option de port.
+3.a.1 L'administrateur sélectione un port. 
+3.a.2 L'administrateur choisit la ville où situé le port.
+3.a.3 Le scenario continue à l'étape 5.
+
+alternatif 4: option de compagnies de croisière.
+3.a L'administrateur choisit l'option de compagnies de croisière.
+3.a.1 L'administrateur sélectione une compagnie de croisière. 
+3.a.2 L'administrateur choisit la ville où situé le port.
+3.a.3 Le scenario continue à l'étape 5.
+
+alternatif 4: option d'ininéraire
+3.a L'administrateur choisit l'option d'ininéraire.
+3.a.1 L'administrateur sélectione une compagnie de croisière qui fournit l'itinéraire.
+3.a.2 L'administrateur sélectione le paquebot disponible dans la liste fournie par la compagnie.
+3.a.3 L'administrateur choisit les dates et heures de départ et arrivée.
+3.a.4 Le système vérifie s'il y a un conflit d'horaire.
+3.a.5 L'administrateur saisit une série de ports par lesquels passe l'itinéraire
+3.a.6 Le sytème vérifie si le port de départ et d'arrivée est le même.
+3.a.7 Le scenario continue à l'étape 5.
+
+//TODO
+scenario 2: consultation
+préconditions: il existe au moins un objet dans le système
+postconditions: non.
+
+principal
+1. L'administrateur sélectionne l'option de consultation.
+2. Le système affiche le menu des objets.
+3. L'administrateur choisit l'option désirée.
+4. Le système affiche les données.
+
+
+
