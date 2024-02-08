@@ -1,0 +1,28 @@
+context Localisation inv:
+self.name->size() = 3
+and 
+self.oclIsKindOf(Aeroport) implies Aeroport.allInstances()->isUnique(name) or
+self.oclIsKindOf(Port) implies Port.allInstances()->isUnique(name) or
+self.oclIsKindOf(Gare) implies Gare.allInstances()->isUnique(name)
+
+context Vol inv:
+    self.ID.substring(1,2)->oclIsTypeOf(String) and
+    self.ID.substring(3).oclAsType(Integer)->oclIsTypeOf(Integer)
+
+
+context Vol inv:
+Vol.allInstances()->select(v | v <> self and v.compagnie <> self.compagnie and v.ID.substring(1,2) = self.ID.substring(1,2)) -> isEmpty()
+and 
+Vol.allInstances()->select(v | v <> self and v.compagnie = self.compagnie and v.ID.substring(3) = self.ID.Substring(3)) -> isEmpty()
+
+context Vol inv:
+self.Arrive <> self.Depart
+
+context Sections inv:
+ self.sieges->forAll(s1, s2 | s1.prix = s2.prix)
+
+context Vol::Reservation(Siege:siege) 
+pre: siege.disponibilty = true
+
+context Payement::Payer(Siege,Reservation : reservation)
+post : Siege.diponibility = false
