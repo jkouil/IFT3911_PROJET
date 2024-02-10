@@ -1,28 +1,28 @@
 context Localisation inv:
-self.name->size() = 3
+self.IdLoc->size() = 3
 and 
-self.oclIsKindOf(Aeroport) implies Aeroport.allInstances()->isUnique(name) or
-self.oclIsKindOf(Port) implies Port.allInstances()->isUnique(name) or
-self.oclIsKindOf(Gare) implies Gare.allInstances()->isUnique(name)
+self.oclIsKindOf(Aeroport) implies Aeroport.allInstances()->isUnique(IdLoc) or
+self.oclIsKindOf(Port) implies Port.allInstances()->isUnique(IdLoc) or
+self.oclIsKindOf(Gare) implies Gare.allInstances()->isUnique(IdLoc)
 
 context Vol inv:
-    self.ID.substring(1,2)->oclIsTypeOf(String) and
-    self.ID.substring(3).oclAsType(Integer)->oclIsTypeOf(Integer)
+    self.IdItin.substring(1,2)->oclIsTypeOf(String) and
+    self.IdItin.substring(3).oclAsType(Integer)->oclIsTypeOf(Integer)
 
 
 context Vol inv:
-Vol.allInstances()->select(v | v <> self and v.compagnie <> self.compagnie and v.ID.substring(1,2) = self.ID.substring(1,2)) -> isEmpty()
+Vol.allInstances()->select(v | v <> self and v.compagnie <> self.compagnie and v.IdItin.substring(1,2) = self.IdItin.substring(1,2)) -> isEmpty()
 and 
-Vol.allInstances()->select(v | v <> self and v.compagnie = self.compagnie and v.ID.substring(3) = self.ID.Substring(3)) -> isEmpty()
+Vol.allInstances()->select(v | v <> self and v.compagnie = self.compagnie and v.IdItin.substring(3) = self.IdItin.Substring(3)) -> isEmpty()
 
 context Vol inv:
 self.Arrive <> self.Depart
 
 context Vol inv:
- self.sections.sieges->forAll(s1, s2 | s1.prix = s2.prix)
+ self.avion.sections.siege->forAll(s1, s2 | s1.prix = s2.prix)
 
-context Trajet::Reservation(Siege:siege) 
-pre: siege.disponibilty = true
+context Registre::reserver(itineraire, siege,priorite) 
+pre: siege.disponibilte = true
 
-context Paiement::Payer(Siege,Reservation : reservation)
-post : Siege.diponibility = false
+context Registre::Payer(reservation, noms,courriel, numpasp)
+post : reservation.confirmation = true
