@@ -1,4 +1,0 @@
-context Gare
-inv CodeGareUnique: Gare.allInstances()->isUnique(codeGare)
-inv CodeGareLongueur: codeGare.size() = 3
-inv CodeGareLettresUniques: codeGare.isUnique()

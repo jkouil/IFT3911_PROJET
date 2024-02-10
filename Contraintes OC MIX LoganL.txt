@@ -18,11 +18,16 @@ Vol.allInstances()->select(v | v <> self and v.compagnie = self.compagnie and v.
 context Vol inv:
 self.Arrive <> self.Depart
 
-context Vol inv:
- self.avion.sections.siege->forAll(s1, s2 | s1.prix = s2.prix)
-
 context Registre::reserver(itineraire, siege,priorite) 
 pre: siege.disponibilte = true
 
-context Registre::Payer(reservation, noms,courriel, numpasp)
+context Registre::payer(reservation, noms,courriel, numpasp)
 post : reservation.confirmation = true
+
+
+context Croisiere
+inv: self.dateArriv - self.dateDep <= 21
+inv: self.port -> first() = self.port -> last()
+
+context Section
+inv: self.cabine -> forAll(p1, p2 | p1.prix = p2.prix) and self.siege->forAll(s1, s2 | s1.prix = s2.prix)
