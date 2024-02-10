@@ -1,0 +1,13 @@
+context Localisation 
+inv: self.id.size() = 3
+inv: Port.id.allInstances() -> forAll(p1, p2 | p1 <> p2 implies p1.id <> p2.id)
+
+context Itineraire
+inv: self.dateFin - self.dateDepart <= 21
+inv: self.ports.passerPar -> first() = self.ports.passerPar -> last()
+
+context Section
+inv: self.cabine_naval -> forAll(p1, p2 | p1.prix = p2.prix)
+
+context reservation_naval
+inv: self.reserveCabine.disponible = true
