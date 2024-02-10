@@ -18,11 +18,11 @@ Vol.allInstances()->select(v | v <> self and v.compagnie = self.compagnie and v.
 context Vol inv:
 self.Arrive <> self.Depart
 
-context Sections inv:
- self.sieges->forAll(s1, s2 | s1.prix = s2.prix)
+context Vol inv:
+ self.sections.sieges->forAll(s1, s2 | s1.prix = s2.prix)
 
-context Vol::Reservation(Siege:siege) 
+context Trajet::Reservation(Siege:siege) 
 pre: siege.disponibilty = true
 
-context Payement::Payer(Siege,Reservation : reservation)
+context Paiement::Payer(Siege,Reservation : reservation)
 post : Siege.diponibility = false
