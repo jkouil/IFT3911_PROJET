@@ -139,8 +139,47 @@
     </table>
     <h2>
         Hypothèses</h2>
-   
-    
+   	<p> 
+         Tâche 1: Pour le diagramme de classe conceptuel, nous avons fait un diagramme qui a une bonne cohésion entre les 
+         classses et lorsque nécessaire combiner les classes différentes qui composent les voyages
+         ferroviaire, naval et aérien en utiisant l'héritage par exemple pour Itinéraire avec Aérien, Ligne et Trajet.
+      <p>
+         -On a supposé que chaque compagnie a une localisation, mais une localisation n'a pas nécessairement de compagnie.
+      </p>
+      <p>
+         -On a supposé qu'un client peut avoir plusieurs réservations, par exemple s'il ou elle veut réserver pour sa famille, 
+         alors la réservation se fait quand même au nom du client.
+      </p>
+      <p>
+         -Nous avons décider de grouper la priorité pour le voyage aérien et ferroviaire et créer une énumération pour ces priorités
+         similaires aérien et ferroviaire pour qu'il soit plus facile de les distinguer et une énumération pour les voyages navals ce
+         qui facilite l'encapsulation et aide à la clarté.
+      </p>
+      <p>
+         -Nous avons essayer le plus posssible de grouper ce qui était commun entre les 3 voyages avec des attributs similaires et des
+         classes générales qui peuvent les englober exemple Compagnie, Localisation, Itinéraire, 
+         Moyen de Transport et utiliser des classes qui sont plus spécifiques là où c'est nécéssaire.
+      </p>
+      <p>
+         Nous avons groupé siège et cabine ensemble puisqu'ils avaient des attributs similaires pour ferroviaire et aérien, mais
+         cabine aura besoin de capacite qui sera set à null lorsque l'on parle de siège.
+      </p>
+      <p>
+         Nous avons utilisé d'utiliser un seul système pour gérer les réservations de tous les types de voyage.
+      </p>
+      </p>
+      <p> 
+         Tâche 2: Pour le diagramme de classe logiciel, nous avons continuer à établir ces relations entre les classes
+         en s'assurant que les attributs des classes sont bien propre à celles-ci et en utilisant le polymorphisme. 
+         Nous avons essayé le plus possible de réutiliser les méthodes similaires entre les 3 voyages et aussi faciliter 
+         la modificiation du logiciel. Nous avons essayer de grouper le plus possibles les méthodes en commun pour chaque 
+         voyage différent et distinguer celles-ci lorsque nécessaire. Nous avons bâti notre diagramme de façon qu'il est
+         facile d'ajouter un autre tyype de voyage si nécessaire ou retirer un voyage si nécessaire.
+      </p>
+      <p> 
+         Tâche 3: Pour les contraines OCL, nous avons mis ensemble le plus possible les contraintes liées aux noms des Ports, Gares
+         et Aéroports puisque ceux-ci avaient les mêmes contraintes.
+      </p>
 
         <p> 
             Hypothese 3: Nous avons supposé qu'il existe deux types de sièges pour les trois modes 
