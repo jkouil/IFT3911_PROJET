@@ -1,0 +1,36 @@
+#Logan
+context Localisation inv:
+self.IdLoc->size() = 3
+and 
+self.oclIsKindOf(Aeroport) implies Aeroport.allInstances()->isUnique(IdLoc) or
+self.oclIsKindOf(Port) implies Port.allInstances()->isUnique(IdLoc) or
+self.oclIsKindOf(Gare) implies Gare.allInstances()->isUnique(IdLoc)
+
+context Vol inv:
+    self.IdItin.substring(1,2)->oclIsTypeOf(String) and
+    self.IdItin.substring(3).oclAsType(Integer)->oclIsTypeOf(Integer)
+
+
+context Vol inv:
+Vol.allInstances()->select(v | v <> self and v.compagnie <> self.compagnie and v.IdItin.substring(1,2) = self.IdItin.substring(1,2)) -> isEmpty()
+and 
+Vol.allInstances()->select(v | v <> self and v.compagnie = self.compagnie and v.IdItin.substring(3) = self.IdItin.Substring(3)) -> isEmpty()
+
+context Vol inv:
+self.Arrive <> self.Depart
+
+context Registre::reserver(itineraire, siege,priorite) 
+pre: siege.disponibilte = true
+
+context Registre::payer(reservation, noms,courriel, numpasp,carteCredit)
+post : reservation.confirmation = true
+
+context Section
+inv: self.cabine -> forAll(p1, p2 | p1.prix = p2.prix) and self.siege->forAll(s1, s2 | s1.prix = s2.prix)
+
+#Qiwu
+
+context Trajet
+inv: self.dateArriv - self.dateDep <= 21
+inv: self.port -> first() = self.port -> last()
+

@@ -1,0 +1,523 @@
+<html>
+<head>
+    <title>IFT2255 DM1 LOGAN</title>
+    
+    <style type="text/css">
+        table
+        {
+            border: outset 2px black;
+            border-collapse: collapse;
+        }
+        th
+        {
+            border-bottom: double 2px black;
+        }
+        td
+        {
+            border-bottom: solid 1px black;
+        }
+        .first_col
+        {
+            border-right: double 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">
+        IFT 2255 - Devoir 1</h1>
+    <h2>
+        Information générale</h2>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Logan Barré
+        <br />
+        <span style="font-weight: bold;">Matricule: </span>20276178
+        <br />
+        <span style="font-weight: bold;">Courriel: </span>logan.barre@umontreal.ca
+        <br />
+        <span style="font-weight: bold;">temps mis: </span>50 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Qiwu Wen
+        <br />
+        <span style="font-weight: bold;">Matricule: </span>20230961
+        <br />
+        <span style="font-weight: bold;">Courriel: </span>qiwu.wen@umontreal.ca
+        <br />
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Ryan Azoune
+        <br />
+        <span style="font-weight: bold;">Matricule: </span>20162578
+        <br />
+        <span style="font-weight: bold;">Courriel: </span>ryan.azoune@umontreal.ca
+        <br />
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <h2>
+        Distribution des tâches</h2>
+    <p>
+        <span style="font-weight: bold;">Soumetteur et Gestionnaire: </span>Logan Barré
+    </p>
+    <table cellpadding="7px">
+        <thead>
+            <tr>
+                <th class="first_col">
+                    Tâche
+                </th>
+                <th>
+                    Logan
+                </th>
+                <th>
+                    Qiwu
+                </th>
+                <th>
+                    Ryan
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first_col">
+                    Diagramme de classe conceptuel
+                </td>
+                <td>
+                    Classes aerien, Mise en page, uniformisation, optimisation, associations(50%)
+                </td>
+                <td>
+                    classe naval(33%)
+                </td>
+                <td>
+                    classe ferroviaire(33%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    DSS
+                </td>
+                <td>
+                    DSS Client aerien, DSS admin aerien
+                </td>
+                <td>
+                    DSS client naval, DSS admin naval,DSS admin naval setTartif
+                </td>
+                <td>
+                    DSS client ferroviaire client
+                </td>
+            </tr>
+
+            <tr>
+                <td class="first_col">
+                    Diagramme de sequence
+                </td>
+                <td>
+                    Diagramme de sequence aerien
+                </td>
+                <td>
+                    diagramme de sequence naval
+                </td>
+                <td>
+                    diagramme de séquence ferroviaire
+                </td>
+            </tr>
+
+            <tr>
+                <td class="first_col">
+                Modele du design
+                </td>
+                <td>
+                    Classes aerien, attributs, methodes et organisation (50%)
+                </td>
+                <td>
+                    classe naval
+                </td>
+                <td>
+                    classe ferroviaire
+                </td>
+            </tr>
+
+            <tr>
+                <td class="first_col">
+                    Contraintes OCL
+                </td>
+                <td>
+                    Classes OCL (Localisation, Vol, Registre et Section)
+                </td>
+                <td>
+                    contraintes OCL naval
+                </td>
+                <td>
+                    contraintes OCL ferroviaire
+                </td>
+            </tr>
+
+            <tr>
+                <td class="first_col">
+                    Rapport HTML
+                </td>
+                <td>
+                    Creation du rapport liens, images, css, html, mise en page, justification
+                </td>
+                <td>
+                    Hypotheses
+                </td>
+                <td>
+                    Hypotheses
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Diagramme paquet
+                </td>
+                <td>
+                    Creation du diagramme paquet
+                </td>
+                <td>
+                    Avis
+                </td>
+                <td>
+                    Avis
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <style>
+       .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            grid-gap: 10px;
+            text-align: center;
+        }
+    
+        .image-container img {
+            max-width: 100%;
+            height: auto; /* Pour maintenir le ratio hauteur/largeur */
+        }
+    
+        .image-title {
+            font-size: 30px;
+            margin-bottom: 10px; /* Espacement entre l'image et son titre */
+        }
+    
+        .diagramme-large {
+            grid-column: span 2; /* Étendre le diagramme sur deux colonnes */
+        }
+    </style>
+    
+    <h2>
+        Tâche 1:
+    </h2>
+    <h3>
+        Hypothese:
+    </h3>
+        <p> 
+          Pour le diagramme de classe conceptuel, nous avons fait un diagramme qui a une bonne cohésion entre les 
+         classses et lorsque nécessaire combiner les classes différentes qui composent les voyages
+         ferroviaire, naval et aérien en utiisant l'héritage par exemple pour Itinéraire avec Aérien, Ligne et Trajet.
+        </p> 
+      <p>
+         -On a supposé que chaque compagnie a une localisation, mais une localisation n'a pas nécessairement de compagnie.
+      </p>
+      <p>
+         -On a supposé qu'un client peut avoir plusieurs réservations, par exemple s'il ou elle veut réserver pour sa famille, 
+         alors la réservation se fait quand même au nom du client.
+      </p>
+      <p>
+         -Nous avons décider de grouper la priorité pour le voyage aérien et ferroviaire et créer une énumération pour ces priorités
+         similaires aérien et ferroviaire pour qu'il soit plus facile de les distinguer et une énumération pour les voyages navals ce
+         qui facilite l'encapsulation et aide à la clarté.
+      </p>
+      <p>
+         -Nous avons essayer le plus posssible de grouper ce qui était commun entre les 3 voyages avec des attributs similaires et des
+         classes générales qui peuvent les englober exemple Compagnie, Localisation, Itinéraire, 
+         Moyen de Transport et utiliser des classes qui sont plus spécifiques là où c'est nécéssaire.
+      </p>
+      <p>
+         Nous avons groupé siège et cabine ensemble puisqu'ils avaient des attributs similaires pour ferroviaire et aérien, mais
+         cabine aura besoin de capacite qui sera set à 1 lorsque l'on parle de siège.
+      </p>
+      
+      <p>
+         Nous avons utilisé un seul système pour gérer les réservations de tous les types de voyage afin de augmenter la cohésion.
+      </p>
+
+      <p>
+        Nous supposons qu'une reservation peut contenir plusieurs sièges afin de satisfaire aux clients qui voyagent en groupe.
+      </p>
+
+      <p>
+        Nous avons supposé que dans le côté client, la première chose qu'il souhaite faire est de visiter 
+            tous les itinéraires de la ville qui l'intéressent. Cela ne 
+            nécessite pas de saisir vos informations personnelles (login), donc toutes nos fonctions d'affichage 
+            de voyage apparaissent dans le registre. Lorsque le client confirme le voyage qu'il souhaite effectuer, 
+            il doit effectuer une réservation en ligne. En fonction du voyage sélectionné, nous pouvons éditer une 
+            classe de réservation.
+      </p>
+
+      <p>
+        Nous avons supposé que le client peut effectuer une réservation sans payer. 
+            Comme le client peut être indécis quant à une décision impromptue, il peut d'abord effectuer
+             une réservation, puis la payer dans le délai spécifié après de réfléchir attentivement. 
+             Cette réservation sera référencée à un numéro de réservation. Le client pourra 
+             utiliser ce numéro de commande pour obtenir une instance de la classe de reservation afin 
+             de faire payer. Lors du paiement, le client doit saisir ses informations d'identité 
+             personnelle, le nom, l'adresse e-mail, le numéro de passeport
+      </p>
+      <hr>
+    <h3>
+        Solution:
+    </h3>
+    <p>
+        Voici la solution pour la tache 1:
+    </p>
+    
+    <ul>
+        <li>Voici le <a href="Domain/Modele domain.vpp">Lien</a> vers le diagramme de classe conceptuel et les différents Diagrammes de séquence système</li>
+    </ul>
+    <div>
+        Liste des Diagrammes de domaine :
+        <br>
+        <div class="image-container">
+            <div>
+                <img src="Domain/ModeleDom.png" alt="Liste des diagrammes du domaine" />
+                <div class="image-title">Modele du domaine</div>
+            </div>
+            <div class="diagramme-large">
+                <img src="Domain/Diagram classe conceptuel.jpg" alt="Modele Domain" />
+                <div class="image-title">Diagramme de classe conceptuel</div>
+            </div>
+            <div>
+                <img src="Domain/Diagramme sequence systeme Client Aerien.jpg" alt="DSS aerien" />
+                <div class="image-title">Diagramme de séquence système aérien (Client)(Logan)</div>
+            </div>
+            <div>
+                <img src="Domain/dss naval client.jpg" alt="DSS naval client" />
+                <div class="image-title">Diagramme de séquence système naval (Client)(Qiwu)</div>
+            </div>
+            <div>
+                <img src="Domain/voyageFerroviaire.jpg" alt="DSS ferro client" />
+                <div class="image-title">Diagramme de séquence système ferroviaire (Client)(Rayan)</div>
+            </div>
+            <div>
+                <img src="Domain/Diagrammes de sequence systeme Admin Aerien.jpg" alt="DSS aerien" />
+                <div class="image-title">Diagramme de séquence système aérien (Admin) (Logan)</div>
+            </div>
+            <div>
+                <img src="Domain/dss admin naval setTartif.jpg" alt="DSS naval" />
+                <div class="image-title">Diagramme de séquence système naval (Admin)(Qiwu)</div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .image-container2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+            grid-gap: 10px;
+            text-align: center;
+        }
+    
+        .image-container2 img {
+            max-width: 100%;
+            height: auto; /* Pour maintenir le ratio hauteur/largeur */
+        }
+    
+        .image-title {
+            font-size: 30px;
+            margin-bottom: 10px; /* Espacement entre l'image et son titre */
+        }
+    
+        .diagramme-large2 {
+            grid-column: span 2; /* Étendre le diagramme sur deux colonnes */
+        }
+        .diagramme-large3 {
+            grid-column: span 1; /* Étendre le diagramme sur deux colonnes */
+        }
+    
+        .image-container3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            grid-gap: 10px;
+            text-align: center;
+        }
+    
+        .image-container3 img {
+            height: auto; /* Pour maintenir le ratio hauteur/largeur */
+        }
+    </style>
+    
+    <h2>
+        Tâche 2:
+    </h2>
+    <h3>
+        Hypothese:
+    </h3>
+    <p>
+        Pour le diagramme de classe logiciel, nous avons continuer à établir ces relations entre les classes
+         en s'assurant que les attributs des classes sont bien propre à celles-ci et en utilisant le polymorphisme. 
+         Nous avons essayé le plus possible de réutiliser les méthodes similaires entre les 3 voyages et aussi faciliter 
+         la modificiation du logiciel. Nous avons essayer de grouper le plus possibles les méthodes en commun pour chaque 
+         voyage différent et distinguer celles-ci lorsque nécessaire. Nous avons bâti notre diagramme de façon qu'il est
+         facile d'ajouter un autre type de voyage si nécessaire ou retirer un voyage si nécessaire.
+    </p>
+    <h3>
+        Solution:
+    </h3>
+    <p>
+        Voici la solution pour la tache 2:
+    </p>
+    <ul>
+        <li>Voici le <a href="Design/Modele design.vpp">Lien</a> vers le diagramme de classe conceptuel et les différents Diagrammes de séquence système</li>
+    </ul>
+    <div>
+        Liste des Diagrammes de domaine :
+        <br>
+        <div class="image-container2">
+            <div>
+                <img src="Design/Liste.png" alt="Liste des diagrammes du design" />
+                <div class="image-title">Modele du design</div>
+            </div>
+            <div class="diagramme-large2">
+                <img src="Design/Diagram classe Logiciel.jpg" alt="Modele design" />
+                <div class="image-title">Diagramme de classe logiciel</div>
+            </div>
+            <div>
+                <img src="Design/Diagramme sequence Client Aerien.jpg" alt="DS aerien" />
+                <div class="image-title">Diagramme de séquence aérien (Client)(Logan)</div>
+            </div>
+            <div>
+                <img src="Design/diagram de sequence client naval.jpg" alt="DSS naval client" />
+                <div class="image-title">Diagramme de séquence système naval (Client)(Qiwu)</div>
+            </div>
+            <div>
+                <img src="Design/diagramme de sequence client ferroviaire.jpg" alt="DS feror client" />
+                <div class="image-title">Diagramme de séquence système ferroviaire (Client)(Rayan)</div>
+            </div>
+            <div class= "diagramme-large2">
+                <img src="Design/Diagram package.jpg" alt="Diag packet" />
+                <div class="image-title">Diagramme de packet (Logan)</div>
+            </div>
+        </div>
+    </div>
+    <h2>
+        Hypothese Tâche 3 :
+    </h2>
+    <p>
+        Hypothese OCL : <br>
+        Concernant la première question en OCL sur l'identification des aéroports, j'ai considéré que chaque code devait être unique pour un aéroport, mais qu'un port ou une gare pouvait partager le même code sans problème, étant donné qu'ils représentent des modes de transport distincts. C'est pourquoi j'ai regroupé tout cela dans la première condition OCL.
+         Pour les compagnies, bien que le code OCL ne soit pas explicitement demandé, j'ai jugé bon de l'ajouter pour garantir l'unicité. J'ai utilisé une précondition pour cela. J'aurais pu également le mettre en invariant, mais j'ai préféré innover pour montrer différentes manières d'implémenter des conditions similaires. En outre, afin de gérer les variations de prix selon les compagnies, j'ai directement inclus leurs tarifs.
+    </p>
+    <h2>
+        Tâche 3:
+    </h2>
+    <h3>
+        Hypothese:
+    </h3>
+    <p>
+        Pour les contraines OCL, nous avons mis ensemble le plus possible les contraintes liées aux noms des Ports, Gares
+        et Aéroports puisque ceux-ci avaient les mêmes contraintes.
+    </p>
+    <h3>
+        Solution:
+    </h3>
+    <p>
+        Voici la solution pour la tache 3:
+    </p>
+    <ul>
+        <li>Voici le <a href="Design/Contraintes OCL.txt.txt">Lien</a> vers les contraintes OCL</li>
+    </ul>
+    <h4>Contexte Localisation</h4>
+    <pre>
+        context Localisation inv:
+        self.IdLoc-&gt;size() = 3
+        and 
+        self.oclIsKindOf(Aeroport) implies Aeroport.allInstances()-&gt;isUnique(IdLoc) or
+        self.oclIsKindOf(Port) implies Port.allInstances()-&gt;isUnique(IdLoc) or
+        self.oclIsKindOf(Gare) implies Gare.allInstances()-&gt;isUnique(IdLoc)
+    </pre>
+
+    <h4>Contexte Vol</h4>
+    <pre>
+        context Vol inv:
+            self.IdItin.substring(1,2)-&gt;oclIsTypeOf(String) and
+            self.IdItin.substring(3).oclAsType(Integer)-&gt;oclIsTypeOf(Integer)
+    </pre>
+
+    <pre>
+        context Vol inv:
+        Vol.allInstances()-&gt;select(v | v &lt;&gt; self and v.compagnie &lt;&gt; self.compagnie and v.IdItin.substring(1,2) = self.IdItin.substring(1,2)) -&gt; isEmpty()
+        and 
+        Vol.allInstances()-&gt;select(v | v &lt;&gt; self and v.compagnie = self.compagnie and v.IdItin.substring(3) = self.IdItin.Substring(3)) -&gt; isEmpty()
+    </pre>
+
+    <pre>
+        context Vol inv:
+        self.Arrive &lt;&gt; self.Depart
+    </pre>
+
+    <h4>Contexte Registre</h4>
+    <pre>
+        context Registre::reserver(itineraire, siege,priorite) 
+        pre: siege.disponibilte = true
+    </pre>
+
+    <pre>
+        context Registre::payer(reservation, noms,courriel, numpasp,carteCredit)
+        post : reservation.confirmation = true
+    </pre>
+
+    <h4>Contexte Section</h4>
+    <pre>
+        context Section
+        inv: self.cabine -&gt; forAll(p1, p2 | p1.prix = p2.prix) and self.siege-&gt;forAll(s1, s2 | s1.prix = s2.prix)
+    </pre>
+
+    <h4>Contexte Trajet</h4>
+    <pre>
+        context Trajet
+        inv: self.dateArriv - self.dateDep &lt;= 21
+        inv: self.port -&gt; first() = self.port -&gt; last()
+    </pre>
+    <h2>
+        Tâche 4
+    </h2>
+    <p>
+        Voici nos justification pour la tache 4 :
+    </p>
+    <p>
+        Dans ce Devoir, nous avons pris certaines hypothèses pour gérer les contraintes de manière agile. Nous avons choisi de maximiser l'utilisation de l'hérédité pour garantir cette agilité. Nous partons du principe que le client accède au système via le registre et que les administrateurs passent par le contrôleur.
+        <br><br>
+        Ainsi, le client peut accéder aux vols et aux réservations grâce à son ID de réservation. Nous avons également opté pour une généralisation des compagnies, qu'elles soient maritimes, aériennes ou ferroviaires, voire qu'elles puissent appartenir à plusieurs catégories. Notre objectif principal était d'assurer la clarté et la concision dans les diagrammes, pour être précis sans ajouter de détails superflus.
+        <br><br>
+        Nous avons également utilisé des énumérations pour les opérations et les types de classes, afin de réduire le nombre de méthodes et de n'appeler que le type d'opération nécessaire dans une méthode générique.
+        <br><br>
+        Dans de nombreux cas, nous n'avons pas utilisé la composition, notamment pour les sections, les sièges et les trajets des compagnies. Cela est dû au fait que la composition requiert au moins un élément, ce qui peut poser des problèmes lors de la création d'une nouvelle compagnie qui n'a pas immédiatement de trajet associé. De plus, nous avons distingué les sièges en deux catégories, siège et cabine, pour une meilleure lisibilité. Partant du fait que les cabines auraient une capacité >= 1 alors que les sièges elles seraient à 1 tout le temps.
+        <br><br>
+        Le contrôleur a été placé uniquement dans le modèle de design, car il est constitué uniquement de méthodes et présent pour le design, tandis que le registre est dans le modèle de domaines pour indiquer où le client accède au système.
+        <br><br>
+        La difficulté de séparer le travail en 3 était présente après que chacun ait fait sa partie liée à un mode de voyage. Nous avons tout regroupé et généralisé la majorité des éléments.
+    </p>
+    <p>
+        Pour optimiser le couplage et la cohésion, nous avons cherché à faciliter l'accès du contrôleur aux différentes parties du système et à éviter les intermédiaires. Le contrôleur occupe donc une position centrale, tandis que les autres parties sont associées de manière logique : un mode de transport avec sa composition (sections, sièges), puis à quel trajet il appartient et à quelle localisation. Le mode de transport représente l'association entre un trajet et une localisation, faisant ainsi le lien entre eux.
+    </p>
+
+    <p> 
+        Justification OCL: (Logan) <br>
+        Concernant la première question en OCL sur l'identification des aéroports, j'ai considéré que chaque code devait être unique pour un aéroport, mais qu'un port ou une gare pouvait partager le même code sans problème, étant donné qu'ils représentent des modes de transport distincts. C'est pourquoi j'ai regroupé tout cela dans la première condition OCL.
+        Pour les compagnies, bien que le code OCL ne soit pas explicitement demandé, j'ai jugé bon de l'ajouter pour garantir l'unicité. J'ai utilisé une précondition pour cela. J'aurais pu également le mettre en invariant, mais j'ai préféré innover pour montrer différentes manières d'implémenter des conditions similaires.
+
+    </p>
+    <p> 
+        Justification diagramme Paquet: (Logan) <br>
+        Pour le diagramme de paquet, j'ai regroupé selon quatre paquets liés entre eux mais dépendants. En premier, le "core" représente la base du logiciel, incluant les compagnies, trajets, localisations ainsi que le contrôleur. En second, la spécialisation du "core" représente les classes héritées telles que les gares, vols et autres. Le troisième représente tout ce qui est lie au transport, incluant les different moyens de transport et leur composition. Nous savons que si nous devions ajouter des spécifications sur les transport en eux meme , ce serait ici. Enfin, le dernier représente l'aspect réservation et paiement, une partie des actions client mais essentielle à la vente.
+    </p>
+</body>
+
+</html>
+
+
+
+<!-- Gestionnaire du projet : Logan, participant Logan,  Qiwu et Rayan -->
