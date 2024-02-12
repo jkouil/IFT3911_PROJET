@@ -166,6 +166,10 @@
          cabine aura besoin de capacite qui sera set à null lorsque l'on parle de siège.
       </p>
       <p>
+        Nous avons supposé que un siège pour voyage ferroviaire et aérien a une capacité de une personne, mais un siège pour 
+        voyage naval a une capacité de plusieurs personnes en fonction de sections de paquebot.
+      </p>
+      <p>
          Nous avons utilisé un seul système pour gérer les réservations de tous les types de voyage afin de augmenter la cohésion.
       </p>
 
@@ -204,15 +208,7 @@
          et Aéroports puisque ceux-ci avaient les mêmes contraintes.
       </p>
 
-        <p> 
-            Hypothese 3: Nous avons supposé qu'il existe deux types de sièges pour les trois modes 
-            de transport différents. Pour le transport aérien et ferroviaire, chaque siège correspond 
-            à un passager. Pour le transport naval, un siège est une cabine, et chaque cabine peut 
-            contenir un nombre différent de passagers selon le section de la cabine. À cet égard, nous définissons 
-            une variable de capacité dans la classe siege afin de réaliser cette exigence.
-             Pour le transport aérien et ferroviaire, la capacité est 
-            automatiquement de 1. En naval, la capacité changera également en fonction des sections.
-        </p>
+        
     
     
         <p> 
