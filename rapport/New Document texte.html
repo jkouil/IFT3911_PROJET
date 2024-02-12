@@ -139,6 +139,7 @@
     </table>
     <h2>
         Hypothèses</h2>
+        <hr>
    	<p> 
          Tâche 1: Pour le diagramme de classe conceptuel, nous avons fait un diagramme qui a une bonne cohésion entre les 
          classses et lorsque nécessaire combiner les classes différentes qui composent les voyages
@@ -165,8 +166,30 @@
          cabine aura besoin de capacite qui sera set à null lorsque l'on parle de siège.
       </p>
       <p>
-         Nous avons utilisé d'utiliser un seul système pour gérer les réservations de tous les types de voyage.
+         Nous avons utilisé un seul système pour gérer les réservations de tous les types de voyage afin de augmenter la cohésion.
       </p>
+
+      <p>
+        Nous avons supposé que dans le côté client, la première chose qu'il souhaite faire est de visiter 
+            tous les itinéraires de la ville qui l'intéressent. Cela ne 
+            nécessite pas de saisir vos informations personnelles (login), donc toutes nos fonctions d'affichage 
+            de voyage apparaissent dans le registre. Lorsque le client confirme le voyage qu'il souhaite effectuer, 
+            il doit effectuer une réservation en ligne. En fonction du voyage sélectionné, nous pouvons éditer une 
+            classe de réservation.
+      </p>
+
+      <p>
+        Nous avons supposé que le client peut effectuer une réservation sans payer. 
+            Comme le client peut être indécis quant à une décision impromptue, il peut d'abord effectuer
+             une réservation, puis la payer dans le délai spécifié après de réfléchir attentivement. 
+             Cette réservation sera référencée à un numéro de réservation. Le client pourra 
+             utiliser ce numéro de commande pour obtenir une instance de la classe de reservation afin 
+             de faire payer. Lors du paiement, le client doit saisir ses informations d'identité 
+             personnelle, le nom, l'adresse e-mail, le numéro de passeport
+      </p>
+      <hr>
+
+
       </p>
       <p> 
          Tâche 2: Pour le diagramme de classe logiciel, nous avons continuer à établir ces relations entre les classes
@@ -216,33 +239,12 @@
             augmenter  
         </p>
     
-        <p> 
-            Hypotheses Tâche 1:<br>
-        </p>
-        <p>
-            Hypothese 1: reservation
-            <br> Nous avons supposé que dans le côté client, la première chose qu'il souhaite faire est de visiter 
-            tous les itinéraires de la ville qui l'intéressent. Cela ne 
-            nécessite pas de saisir vos informations personnelles (login), donc toutes nos fonctions d'affichage 
-            de voyage apparaissent dans le registre. Lorsque le client confirme le voyage qu'il souhaite effectuer, 
-            il doit effectuer une réservation en ligne. En fonction du voyage sélectionné, nous pouvons éditer une 
-            classe de réservation.
+        
     
     
-        </p>
+       
     
-        <p> 
-            Hypothese 2: paiement 
-            <br>Nous avons supposé que le client peut effectuer une réservation sans payer. 
-            Comme le client peut être indécis quant à une décision impromptue, il peut d'abord effectuer
-             une réservation, puis la payer dans le délai spécifié après de réfléchir attentivement. 
-             Cette réservation sera référencée à un numéro de réservation. Le client pourra 
-             utiliser ce numéro de commande pour obtenir une instance de la classe de reservation afin 
-             de faire payer. Lors du paiement, le client doit saisir ses informations d'identité 
-             personnelle, le nom, l'adresse e-mail, le numéro de passeport et ces informations 
-             personnelles ne correspondent qu'à un seul paiement, lecture possible seulement aux systèmes qui peuvent accèder à ce paiement
-             . Donc, pour la raison de la sécurité, ce type n'est donc accessible que via l'association de la classe de paiement.
-        </p>
+        
     <h2>
         Tâche 1</h2>
     <p>
