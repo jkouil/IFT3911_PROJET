@@ -139,59 +139,71 @@
     </table>
     <h2>
         Hypothèses</h2>
-    <p> 
-        Hypothese 1: Nous avons supposé que dans le côté client, la première chose qu'il souhaite faire est de visiter 
-        tous les itinéraires de la ville qui l'intéressent. Cela ne 
-        nécessite pas de saisir vos informations personnelles (login), donc toutes nos fonctions d'affichage 
-        de voyage apparaissent dans le registre. Lorsque le client confirme le voyage qu'il souhaite effectuer, 
-        il doit effectuer une réservation en ligne. En fonction du voyage sélectionné, nous pouvons éditer une 
-        classe de réservation.
-    </p>
+   
+    
 
-    <p> 
-        Hypothese 2: Nous avons supposé que le client peut effectuer une réservation sans payer. 
-        Comme le client peut être indécis quant à une décision impromptue, il peut d'abord effectuer
-         une réservation, puis la payer dans le délai spécifié après de réfléchir attentivement. 
-         Cette réservation sera référencée à un numéro de réservation. Le client pourra 
-         utiliser ce numéro de commande pour obtenir une instance de la classe de reservation afin 
-         de faire payer. Lors du paiement, le client doit saisir ses informations d'identité 
-         personnelle, le nom, l'adresse e-mail, le numéro de passeport et ces informations 
-         personnelles ne correspondent qu'à un seul paiement, lecture possible seulement aux systèmes qui peuvent accèder à ce paiement
-         . Donc, pour la raison de la sécurité, ce type n'est donc accessible que via l'association de la classe de paiement.
-    </p>
-
-    <p> 
-        Hypothese 3: Nous avons supposé qu'il existe deux types de sièges pour les trois modes 
-        de transport différents. Pour le transport aérien et ferroviaire, chaque siège correspond 
-        à un passager. Pour le transport naval, un siège est une cabine, et chaque cabine peut 
-        contenir un nombre différent de passagers selon le section de la cabine. À cet égard, nous définissons 
-        une variable de capacité dans la classe siege afin de réaliser cette exigence.
-         Pour le transport aérien et ferroviaire, la capacité est 
-        automatiquement de 1. En naval, la capacité changera également en fonction des sections.
-    </p>
-
-
-    <p> 
-        Hypothese 4: Nous avons supposé qu'une reservation peut contenir plusieurs sièges afin de satisafire aux clients qui font des 
-        voyages en groupe. Dans ce context, le prix de chaque siège peut varier en fonction des différentes sections, 
-        de sorte que les prix des différents sièges dans une réservation sont indépendants.
-         Nous pouvons simplement ajouter les prix de tous les sièges lors du calcul du prix total de la réservation.
-    </p>
-
-    <p> 
-        Hypothese 5: Nous avons supposé que L'administrateur peut 
-        gérer la compagnie, l'itinéraire et la localisation via 
-        le contrôleur. Parmi eux, l'itinéraire peut être spécifié 
-        en trois classes : vol, ferrovaire et croisiere. Les compagnies sont associées aux itinéraires, 
-        et aussi peuvent être gérer directement par l'administrateur en utilisant le contrôleur. Pour ces raisons, 
-        la classe compagnie est associée au contrôleur et itineraire. De plus, les itinéraires font partie de la compagnie 
-        qu'ils associent, donc c'est une composition entre itineraire et compagnie.
-    </p>
-
-    <p> 
-        Hypothese 6: 
-    </p>
-
+        <p> 
+            Hypothese 3: Nous avons supposé qu'il existe deux types de sièges pour les trois modes 
+            de transport différents. Pour le transport aérien et ferroviaire, chaque siège correspond 
+            à un passager. Pour le transport naval, un siège est une cabine, et chaque cabine peut 
+            contenir un nombre différent de passagers selon le section de la cabine. À cet égard, nous définissons 
+            une variable de capacité dans la classe siege afin de réaliser cette exigence.
+             Pour le transport aérien et ferroviaire, la capacité est 
+            automatiquement de 1. En naval, la capacité changera également en fonction des sections.
+        </p>
+    
+    
+        <p> 
+            Hypothese 4: Nous avons supposé qu'une reservation peut contenir plusieurs sièges afin de satisafire aux clients qui font des 
+            voyages en groupe. Dans ce context, le prix de chaque siège peut varier en fonction des différentes sections, 
+            de sorte que les prix des différents sièges dans une réservation sont indépendants.
+             Nous pouvons simplement ajouter les prix de tous les sièges lors du calcul du prix total de la réservation.
+        </p>
+    
+        <p> 
+            Hypothese 5: Nous avons supposé que L'administrateur peut 
+            gérer la compagnie, l'itinéraire et la localisation via 
+            le contrôleur.(faible couplage) Parmi eux, l'itinéraire peut être spécifié 
+            en trois classes : vol, ferrovaire et croisiere. Les compagnies sont associées aux itinéraires, 
+            et aussi peuvent être gérer directement par l'administrateur en utilisant le contrôleur. Pour ces raisons, 
+            la classe compagnie est associée au contrôleur et itineraire. De plus, les itinéraires font partie de la compagnie 
+            qu'ils associent, donc c'est une composition entre itineraire et compagnie. Le contrôleur peut également gérer la classe 
+            localisation, qui peut être spécifié en trois classes: Port, Gare, Aeroport qui sont associées aux classes généralisées de 
+            la classe itinéraire.(relation passé par)
+        </p>
+    
+        <p> 
+            Hypothese 6: Nous avons supposé que l'administrateur peut choisir l'action qu'il veut faire en utilisant la classe contrôleur afin de 
+            augmenter  
+        </p>
+    
+        <p> 
+            Hypotheses Tâche 1:<br>
+        </p>
+        <p>
+            Hypothese 1: reservation
+            <br> Nous avons supposé que dans le côté client, la première chose qu'il souhaite faire est de visiter 
+            tous les itinéraires de la ville qui l'intéressent. Cela ne 
+            nécessite pas de saisir vos informations personnelles (login), donc toutes nos fonctions d'affichage 
+            de voyage apparaissent dans le registre. Lorsque le client confirme le voyage qu'il souhaite effectuer, 
+            il doit effectuer une réservation en ligne. En fonction du voyage sélectionné, nous pouvons éditer une 
+            classe de réservation.
+    
+    
+        </p>
+    
+        <p> 
+            Hypothese 2: paiement 
+            <br>Nous avons supposé que le client peut effectuer une réservation sans payer. 
+            Comme le client peut être indécis quant à une décision impromptue, il peut d'abord effectuer
+             une réservation, puis la payer dans le délai spécifié après de réfléchir attentivement. 
+             Cette réservation sera référencée à un numéro de réservation. Le client pourra 
+             utiliser ce numéro de commande pour obtenir une instance de la classe de reservation afin 
+             de faire payer. Lors du paiement, le client doit saisir ses informations d'identité 
+             personnelle, le nom, l'adresse e-mail, le numéro de passeport et ces informations 
+             personnelles ne correspondent qu'à un seul paiement, lecture possible seulement aux systèmes qui peuvent accèder à ce paiement
+             . Donc, pour la raison de la sécurité, ce type n'est donc accessible que via l'association de la classe de paiement.
+        </p>
     <h2>
         Tâche 1</h2>
     <p>
